@@ -1,15 +1,8 @@
+/*
 .App {
-  text-align: center;
+  align-items: center;
 }
+*/
 
-#first {
-  text-align: center;
-}
 
-.infoBox {
-  text-align: center;
-  border: 0.5rem solid black;
-  border-radius: 3rem;
-  background-color: white;
-  height: 5rem;
-}
+
