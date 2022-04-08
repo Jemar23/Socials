@@ -2,6 +2,7 @@ import './App.css';
 import { GrTwitter } from "react-icons/gr";
 import { GrLinkedin } from "react-icons/gr";
 import { GrGithub } from "react-icons/gr";
+import { siTwitter, siLinkedin, siGithub, siOpensea } from 'simple-icons/icons';
 
 function App() {
   return (
@@ -26,14 +27,15 @@ function Name() {
 
 function InfoBox() {
   return (
-    <div className="w-full space-y-4 pt-2 row-3">
-      <p className="text-center text-lg">OpenSea NFT portfolio</p>
-      <p className="text-center text-lg">Monitors</p>
-      <p className="text-center text-lg">KeyBoard</p>
-      <p className="text-center text-lg">Camera</p>
+    <div className="container mx-auto w-full space-y-4 pt-2 row-3">
+      <p className="text-center text-lg bg-indigo-400 rounded-full">OpenSea NFT portfolio</p>
+      <p className="text-center text-lg bg-indigo-400 rounded-full">Monitors</p>
+      <p className="text-center text-lg bg-indigo-400 rounded-full">KeyBoard</p>
+      <p className="text-center text-lg bg-indigo-400 rounded-full">Camera</p>
     </div>
   );
 }
+
 
 function Logos() {
   return (
@@ -57,8 +59,8 @@ function Discord() {
   return (
     <div className="w-6 h-6 rounded-full">
       <a href="https://discord.com" target="_blank" rel="noopener noreferrer">Discord</a>
-      <svg width="24" height="24" fill="#ffffff">
-      <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <svg width="48" height="48" fill="#ffffff">
+      <svg role="img" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
         <title>Discord</title>
         <path d="M40,12c0,0-4.585-3.588-10-4l-0.488,0.976C34.408,10.174,36.654,11.891,39,14c-4.045-2.065-8.039-4-15-4s-10.955,1.935-15,4c2.346-2.109,5.018-4.015,9.488-5.024L18,8c-5.681,0.537-10,4-10,4s-5.121,7.425-6,22c5.162,5.953,13,6,13,6l1.639-2.185C13.857,36.848,10.715,35.121,8,32c3.238,2.45,8.125,5,16,5s12.762-2.55,16-5c-2.715,3.121-5.857,4.848-8.639,5.815L33,40c0,0,7.838-0.047,13-6C45.121,19.425,40,12,40,12z M17.5,30c-1.933,0-3.5-1.791-3.5-4c0-2.209,1.567-4,3.5-4s3.5,1.791,3.5,4C21,28.209,19.433,30,17.5,30z M30.5,30c-1.933,0-3.5-1.791-3.5-4c0-2.209,1.567-4,3.5-4s3.5,1.791,3.5,4C34,28.209,32.433,30,30.5,30z">
         </path>
@@ -68,4 +70,20 @@ function Discord() {
   );
 }
 
+
+// function MapIcons() {
+//   const socialLinks = [
+//     {logoName: "twitter", icon: siTwitter, link: 'https://twitter.com'},
+//     {logoName: "linkedin", icon: siLinkedin, link: 'https://www.linkedin.com'},
+//     {logoName: "github", icon: siGithub, link: 'https://github.com'},
+//     {logoName: "opensea", icon: siOpensea, link: 'https://opensea.com'}
+//   ]
+//   return (
+//     <div className="flex space-x-4">
+//       {socialLinks.map(({logoName, icon, link}) => (
+//         <MapIcons logoName={logoName} icon={icon} link={link} />
+//       ))}
+//     </div>
+//   );
+// }
 export default App;
