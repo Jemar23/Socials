@@ -2,88 +2,99 @@ import './App.css';
 import { GrTwitter } from "react-icons/gr";
 import { GrLinkedin } from "react-icons/gr";
 import { GrGithub } from "react-icons/gr";
-import { siTwitter, siLinkedin, siGithub, siOpensea } from 'simple-icons/icons';
 
 function App() {
   return (
     <div className="App">
-      <Name />
-      <Logos />
-      <InfoBox />
-      <Buttons />
-      <Discord />
-    </div>
-  );
-}
-
-function Name() {
-   return (
-     <div className="flex flex-col items-center">
-       <h1 className="text-2xl font-extrabold">Jemar Johnson</h1>
-       <p className="text-lg font-bold">Student Software Engineer at BloomTech</p>
-     </div>
-   );
-}
-
-function InfoBox() {
-  return (
-    <div className="container mx-auto w-full space-y-4 pt-2 row-3">
-      <p className="text-center text-lg bg-indigo-400 rounded-full">OpenSea NFT portfolio</p>
-      <p className="text-center text-lg bg-indigo-400 rounded-full">Monitors</p>
-      <p className="text-center text-lg bg-indigo-400 rounded-full">KeyBoard</p>
-      <p className="text-center text-lg bg-indigo-400 rounded-full">Camera</p>
+    <Name />
+    <Icon />
+    <Links />
     </div>
   );
 }
 
 
-function Logos() {
+ function Name() {
+    return (
+      <div className="flex flex-col items-center text-white">
+        <h1 className="text-2xl font-extrabold">Jemar Johnson</h1>
+        <p className="text-lg font-bold">Student Software Engineer at BloomTech</p>
+      </div>
+    );
+ }
+
+ function Icon() {
   return (
     <div className="flex justify-center gap-2 pt-2">
-      <GrTwitter size='20px' />
-      <GrLinkedin size='20px'/>
-      <GrGithub size='20px'/>
+       <a className="flex items-center justify-center text-center  hover:bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full shadow-lg overflow-hidden h-8 w-8" 
+       href="https://twitter.com/Enkourage_" 
+       target="_blank" 
+       rel="noopener noreferrer">
+        <GrTwitter size='20px' color='white'/>
+       </a>
+
+       <a className="flex items-center justify-center text-center hover:bg-gradient-to-r from-violet-500 to-blue-500 rounded-full  shadow-lg overflow-hidden h-8 w-8" 
+       href="https://www.linkedin.com/in/jemar-johnson-029280206/" 
+       target="_blank" 
+       rel="noopener noreferrer">
+        <GrLinkedin size='20px' color='white' />   
+       </a>
+
+       <a className="flex items-center justify-center text-center hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full shadow-lg overflow-hidden h-8 w-8" 
+       href="https://github.com/Jemar23" 
+       target="_blank" 
+       rel="noopener noreferrer">
+           <GrGithub size='20px' color='white'/>
+       </a>
+
     </div>
   );
 }
 
-function Buttons() {
-  return (
-    <div className="flex justify-center pt-2">
-      <button className="box-border border-solid rounded-full h-30 w-72 p-4 border-4">Click</button>
-    </div>
-  );
-}
+ function Links() {
+   return (
+     <div className="container mx-auto px-14 w-full space-y-4 pt-2 text-lg text-slate-300">
+       <a className="flex items-center justify-start text-center bg-slate-800 rounded-md border border-slate-600 shadow-lg hover:shadow-indigo-500/40 overflow-hidden h-24" 
+       href="https://opensea.io/EnKourage" 
+       target="_blank" 
+       rel="noopener noreferrer">
+         <img className="h-24 w-auto bg-auto" src="https://lh3.googleusercontent.com/fUXzLYjKgqtHqiePsN2nFkjSu2ZK4nRy5BhnPt4Kn8D0ypQv9lBr6g3NJgWDlRGfZjyqWTQsIy0VXW5b35y32CopKWeXO_V1_cBHkQ=w600" alt="FaceCam">
 
-function Discord() {
-  return (
-    <div className="w-6 h-6 rounded-full">
-      <a href="https://discord.com" target="_blank" rel="noopener noreferrer">Discord</a>
-      <svg width="48" height="48" fill="#ffffff">
-      <svg role="img" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-        <title>Discord</title>
-        <path d="M40,12c0,0-4.585-3.588-10-4l-0.488,0.976C34.408,10.174,36.654,11.891,39,14c-4.045-2.065-8.039-4-15-4s-10.955,1.935-15,4c2.346-2.109,5.018-4.015,9.488-5.024L18,8c-5.681,0.537-10,4-10,4s-5.121,7.425-6,22c5.162,5.953,13,6,13,6l1.639-2.185C13.857,36.848,10.715,35.121,8,32c3.238,2.45,8.125,5,16,5s12.762-2.55,16-5c-2.715,3.121-5.857,4.848-8.639,5.815L33,40c0,0,7.838-0.047,13-6C45.121,19.425,40,12,40,12z M17.5,30c-1.933,0-3.5-1.791-3.5-4c0-2.209,1.567-4,3.5-4s3.5,1.791,3.5,4C21,28.209,19.433,30,17.5,30z M30.5,30c-1.933,0-3.5-1.791-3.5-4c0-2.209,1.567-4,3.5-4s3.5,1.791,3.5,4C34,28.209,32.433,30,30.5,30z">
-        </path>
-        </svg>
-      </svg>
-    </div>
-  );
-}
+        </img>
+        <div className="p-4">View NFT's I own!</div>
+       </a>
 
+       <a className="flex items-center justify-start text-center bg-slate-800 rounded-md border border-slate-600 shadow-lg hover:shadow-indigo-500/40 overflow-hidden h-24" 
+       href="https://www.amazon.com/Sceptre-DisplayPort-Edge-Less-FreeSync-C275B-1858RN/dp/B089V2R9WW/ref=sr_1_14?keywords=sceptre+27+inch+monitor&qid=1650495955&s=electronics&sprefix=sc%2Celectronics%2C77&sr=1-14" 
+       target="_blank" 
+       rel="noopener noreferrer">
+         <img className="h-24 w-auto bg-auto" src="https://m.media-amazon.com/images/I/61oVczVkrkL._AC_SX679_.jpg" alt="FaceCam">
 
-// function MapIcons() {
-//   const socialLinks = [
-//     {logoName: "twitter", icon: siTwitter, link: 'https://twitter.com'},
-//     {logoName: "linkedin", icon: siLinkedin, link: 'https://www.linkedin.com'},
-//     {logoName: "github", icon: siGithub, link: 'https://github.com'},
-//     {logoName: "opensea", icon: siOpensea, link: 'https://opensea.com'}
-//   ]
-//   return (
-//     <div className="flex space-x-4">
-//       {socialLinks.map(({logoName, icon, link}) => (
-//         <MapIcons logoName={logoName} icon={icon} link={link} />
-//       ))}
-//     </div>
-//   );
-// }
+        </img>
+        <div className="p-4">Link to my Monitors</div>
+       </a>
+
+       <a className="flex items-center justify-start text-center bg-slate-800 rounded-md border border-slate-600 shadow-lg hover:shadow-indigo-500/40 overflow-hidden h-24" 
+       href="https://www.amazon.com/gp/product/B07W6ZTMWP/ref=ppx_yo_dt_b_asin_image_o03_s02?ie=UTF8&th=1" 
+       target="_blank" 
+       rel="noopener noreferrer">
+         <img className="h-24 w-auto bg-auto" src="https://m.media-amazon.com/images/I/71y87QFHegL._AC_SX679_.jpg" alt="FaceCam">
+
+        </img>
+        <div className="p-4">Link to my KeyBoard</div>
+       </a>
+
+       <a className="flex items-center justify-start text-center bg-slate-800 rounded-md border border-slate-600 shadow-lg hover:shadow-indigo-500/40 overflow-hidden h-24 " 
+       href="https://www.elgato.com/en/facecam" 
+       target="_blank" 
+       rel="noopener noreferrer">
+         <img className="h-24 w-auto bg-auto" src="https://www.xda-developers.com/files/2021/07/Elgato-Facecam-1.jpg" alt="FaceCam">
+
+        </img>
+        <div className="p-4">Link to my Camera</div>
+       </a> 
+     </div>
+   );
+ }
+
 export default App;
